@@ -3,21 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>✨ Super Search Engine ✨</title>
-  <link rel="stylesheet" href="css.css">
+  <title>🌌 Nexus Search Pro 🌌</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container">
+    <!-- Header -->
     <header>
-      <h1>🌟 Super Search Hub <span>Elite</span> 🌟</h1>
+      <div class="logo">
+        <i class="fas fa-rocket"></i> Nexus Search <span>Pro</span>
+      </div>
+      <p class="tagline">Discover the Universe of Knowledge</p>
+      
     </header>
-    <div class="search-container">
-      <input type="text" id="searchInput" placeholder="Type your magic word... 🔮">
-      <button onclick="runSearch()">Search</button>
-    </div>
-    <div id="results"></div>
-    <footer>Explore the Universe of Knowledge</footer>
+
+    <!-- Search Section -->
+    <section class="search-section">
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search the cosmos... 🔍">
+        <button onclick="runSearch()">Explore</button>
+      </div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="results" class="results-section"></section>
+
+    <!-- Footer -->
+    <footer>
+      <p>Powered by Neba 🌠 &copy; 2025</p>
+      <div class="social-links">
+        <a href="https://github.com/neba378" class="social-icon"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/nebiyu-musbah/" class="social-icon"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </footer>
   </div>
-  <script src="index.js"></script>
+
+  <script src="script.js"></script>
 </body>
 </html>

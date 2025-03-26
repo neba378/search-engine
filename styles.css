@@ -1,0 +1,278 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #2b5876, #4e4376, #f5576c);
+    background-size: 300% 300%;
+    animation: bgFlow 20s ease infinite;
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+@keyframes bgFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 80px 0 60px;
+    background: rgba(0, 0, 0, 0.2);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5em;
+    color: #ffd700;
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
+}
+
+.logo i {
+    color: #f5576c;
+    margin-right: 10px;
+}
+
+.logo span {
+    color: #00ddeb;
+    font-style: italic;
+}
+
+.tagline {
+    font-size: 1.3em;
+    color: #e0e0e0;
+    letter-spacing: 2px;
+    margin-top: 10px;
+}
+
+.header-decor {
+    margin-top: 20px;
+}
+
+.decor-icon {
+    width: 50px;
+    height: 50px;
+    opacity: 0.8;
+    animation: spin 10s linear infinite;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Search Section */
+.search-section {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+    margin-bottom: 60px;
+    transition: transform 0.3s ease;
+}
+
+.search-section:hover {
+    transform: translateY(-10px);
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 15px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0 0 15px rgba(245, 87, 108, 0.6);
+}
+
+button {
+    padding: 15px 35px;
+    font-size: 18px;
+    background: linear-gradient(45deg, #f5576c, #ffd700);
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 5px 20px rgba(245, 87, 108, 0.5);
+    transition: all 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #4e4376, #00ddeb);
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(78, 67, 118, 0.6);
+}
+
+button::before {
+    content: "\f002 ";
+    /* Font Awesome search icon */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 5px;
+}
+
+/* Results Section */
+.results-section {
+    display: grid;
+    gap: 30px;
+}
+
+.result-item {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    transition: all 0.3s;
+    border-left: 6px solid #ffd700;
+}
+
+.result-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+    border-left-color: #f5576c;
+}
+
+.result-item img {
+    width: 70px;
+    height: 70px;
+    border-radius: 15px;
+    object-fit: cover;
+    border: 3px solid #00ddeb;
+}
+
+.result-content h3 {
+    margin: 0 0 10px;
+    font-size: 1.6em;
+    color: #4e4376;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.result-content h3::before {
+    content: "\f15c ";
+    /* Font Awesome file icon */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #f5576c;
+}
+
+.result-content p {
+    margin: 0;
+    color: #333;
+    font-size: 1.2em;
+}
+
+.result-content p::before {
+    content: "\f5d2 ";
+    /* Font Awesome sparkle icon */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #ffd700;
+    margin-right: 5px;
+}
+
+.score {
+    font-weight: bold;
+    color: #f5576c;
+    background: rgba(245, 87, 108, 0.1);
+    padding: 3px 10px;
+    border-radius: 12px;
+}
+
+.score::after {
+    content: " 🌟";
+}
+
+/* No Results */
+.no-results {
+    text-align: center;
+    font-size: 1.6em;
+    color: #fff;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+.no-results::before {
+    content: "\f119 ";
+    /* Font Awesome sad face icon */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 40px 0;
+    background: rgba(0, 0, 0, 0.2);
+    margin-top: 60px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+footer p {
+    font-size: 1.1em;
+    color: #e0e0e0;
+}
+
+.social-links {
+    margin-top: 15px;
+}
+
+.social-icon {
+    color: #ffd700;
+    font-size: 1.5em;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.social-icon:hover {
+    color: #f5576c;
+    transform: scale(1.2);
+}
